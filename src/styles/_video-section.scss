@@ -8,7 +8,7 @@
 .learn-more {
   min-height: 637px;
 
-  @include background-image("https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-photo-2339181-1.png");
+  @include background-image("/src/assets/pexels-photo-2339181-1.png");
   @include flex-center;
 
   color: $color-white;

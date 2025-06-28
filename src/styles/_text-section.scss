@@ -18,11 +18,11 @@
     height: 100%;
 
     @include background-image(
-      "https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-bernyce-hollingworth-2702805-1.png"
+      "/src/assets/pexels-bernyce-hollingworth-2702805-1.png",
     );
 
     background-image:
-      url("https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-bernyce-hollingworth-2702805-1.png"),
+      url("/src/assets/pexels-bernyce-hollingworth-2702805-1.png"),
       linear-gradient(90deg, rgb(0 0 0 / 0%) 86%, rgb(0 0 0 / 100%) 100%);
     background-blend-mode: multiply;
   }
