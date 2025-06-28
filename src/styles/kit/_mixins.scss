@@ -2,7 +2,7 @@
 // MIXINS
 // ===================================
 
-@use 'variables' as *;
+@use "variables" as *;
 
 // Breakpoints mixins
 @mixin mobile {
@@ -101,7 +101,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 0;
@@ -181,7 +181,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, $opacity);

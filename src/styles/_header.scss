@@ -2,8 +2,8 @@
 // HEADER COMPONENT - DESKTOP
 // ===================================
 
-@use 'kit/variables' as *;
-@use 'kit/mixins' as *;
+@use "kit/variables" as *;
+@use "kit/mixins" as *;
 
 .header {
   position: absolute;
@@ -51,10 +51,10 @@
 
     &:hover {
       opacity: 0.8;
-      
+
       // Hover effect - bottom border
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -4px;
         left: 0;
@@ -76,7 +76,7 @@
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -4px;
         left: 0;

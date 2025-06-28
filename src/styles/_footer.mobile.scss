@@ -2,8 +2,8 @@
 // FOOTER COMPONENT - MOBILE & TABLET
 // ===================================
 
-@use 'kit/variables' as *;
-@use 'kit/mixins' as *;
+@use "kit/variables" as *;
+@use "kit/mixins" as *;
 
 .footer {
   @include tablet {
@@ -13,8 +13,6 @@
       gap: $spacing-md;
       max-width: none;
     }
-
-
 
     &__logo-image {
       width: 80px;
@@ -26,7 +24,6 @@
       font-size: 20px;
       letter-spacing: 20%;
     }
-
   }
 
   @include mobile {
@@ -65,7 +62,7 @@
       line-height: 24px;
       margin-bottom: 8px;
       max-width: 200px;
-      color: rgb(255 255 255 / 70%)
+      color: rgb(255 255 255 / 70%);
     }
 
     &__copyright {

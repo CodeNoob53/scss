@@ -2,15 +2,14 @@
 // VIDEO SECTION - MOBILE & TABLET
 // ===================================
 
-@use 'kit/variables' as *;
-@use 'kit/mixins' as *;
+@use "kit/variables" as *;
+@use "kit/mixins" as *;
 
 .learn-more {
   @include tablet {
     min-height: 659px;
 
     @include flex-column;
-
 
     &__content {
       padding: $spacing-xl $spacing-md;
@@ -53,7 +52,6 @@
       @include clamp-text(36px, 8vw, $font-size-hero-mobile);
 
       line-height: 1.1;
-;
     }
 
     &__play-button {

@@ -2,8 +2,8 @@
 // FOOTER COMPONENT - DESKTOP
 // ===================================
 
-@use 'kit/variables' as *;
-@use 'kit/mixins' as *;
+@use "kit/variables" as *;
+@use "kit/mixins" as *;
 
 .footer {
   background-color: $color-black;
@@ -11,7 +11,7 @@
   color: $color-white;
 
   &__content {
-    font-family: "Source Sans Pro";
+    font-family: $font-primary;
     max-width: 905px;
     margin: 0 auto;
     display: grid;
