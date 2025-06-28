@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT - Головна сторінка</title>
+    
+    <!-- Preconnect для оптимізації -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Шрифти -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Sail:wght@400&family=Notable:wght@400&family=Poppins:wght@400&family=Oswald:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../dist/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Хедер -->
+      <header class="header" role="banner">
+        <div class="header__brand">PROJECT</div>
+
+        <!-- Десктопна навігація -->
+        <nav class="header__nav" role="navigation" aria-label="Головна навігація">
+          <a href="#hero" class="header__nav-item">PROJECTS</a>
+          <a href="#content" class="header__nav-item header__nav-item--active">ABOUT US</a>
+          <a href="#learn-more" class="header__nav-item">STORIES</a>
+          <a href="#footer" class="header__nav-item">CONTACT</a>
+        </nav>
+
+        <!-- Мобільне меню -->
+        <div class="header__mobile-menu">
+          <input
+            class="header__checkbox"
+            type="checkbox"
+            id="mobile-menu-toggle"
+            aria-label="Відкрити/закрити мобільне меню"
+          />
+          <label for="mobile-menu-toggle" class="header__hamburger">
+            <span class="header__line header__line--1"></span>
+            <span class="header__line header__line--2"></span>
+            <span class="header__line header__line--3"></span>
+          </label>
+          <nav class="header__mobile-items" role="navigation">
+            <ul>
+              <li><a href="#hero">PROJECTS</a></li>
+              <li><a href="#content">ABOUT US</a></li>
+              <li><a href="#learn-more">STORIES</a></li>
+              <li><a href="#footer">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Героїчна секція -->
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero__image"></div>
+          <div class="hero__content">
+            <img
+              class="hero__logo"
+              src="https://c.animaapp.com/mcbtnowr22sDoO/img/logo-vine-3x-2-1.png"
+              alt="Логотип винарні PROJECT"
+            />
+            <h1 class="hero__title">Your Headline<br />here</h1>
+            <p class="hero__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
+              eiusmod.
+            </p>
+          </div>
+        </section>
+
+        <!-- Основний контент -->
+        <section class="content" id="content">
+          <div class="content__inner">
+            <h2 class="content__title">
+              This is the Section Headline,<br />Continues to Two Lines
+            </h2>
+            <p class="content__subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
+              eiusmod.
+            </p>
+            <div class="content__columns">
+              <div class="content__column content__column--left">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum. Sed
+                ut perspiciatis unde omnis.
+              </div>
+              <div class="content__column content__column--right">
+                Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+            </div>
+            <button class="content__button" type="button">
+              READ MORE
+            </button>
+          </div>
+        </section>
+
+        <!-- Секція "Дізнатися більше" -->
+        <section class="learn-more" id="learn-more">
+          <div class="learn-more__content">
+            <h2 class="learn-more__title">
+              Learn more<br />about our culture...
+            </h2>
+            <button class="learn-more__play-button" type="button" aria-label="Відтворити відео">
+            </button>
+            <p class="learn-more__description">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Футер -->
+      <footer class="footer" id="footer" role="contentinfo">
+        <div class="footer__content">
+          <address class="footer__contact">
+            <div class="footer__address" aria-label="address">
+              <span class="footer__address-line1">123 Street,</span><br />
+              <span class="footer__address-line2">Anytown,</span>
+              <span class="footer__address-line3">USA 12345</span>
+            </div>
+            <a href="mailto:hello@website.com" class="footer__email">hello@website.com</a>
+          </address>
+          <div class="footer__logo">
+            <img
+              class="footer__logo-image"
+              src="https://c.animaapp.com/mcbtnowr22sDoO/img/logo-vine-3x-2-1.png"
+              alt="Логотип PROJECT"
+            />
+            <div class="footer__logo-text">PROJECT</div>
+          </div>
+          <div class="footer__copyright">
+            © 2021 Project. All rights reserved
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./header-scroll.js"></script>
+  </body>
+</html>

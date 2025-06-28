@@ -1,0 +1,65 @@
+// ===================================
+// HEADER COMPONENT - MOBILE
+// ===================================
+
+@use 'kit/variables' as *;
+@use 'kit/mixins' as *;
+
+.header {
+  @include tablet {
+    &__nav {
+      gap: $spacing-md;
+    }
+
+    &__nav-item {
+      @include font-primary(13px, 400);
+
+      letter-spacing: 2.4px;
+    }
+  }
+
+  @include mobile {
+    padding: 47px 21px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: none;
+    background: transparent;
+    backdrop-filter: none;
+    align-items: center;
+    z-index: $z-index-header;
+    transition: background 0.3s, backdrop-filter 0.3s; // плавна поява
+
+    &.header--scrolled {
+      background: rgb(0 0 0 / 80%);
+      backdrop-filter: blur(4px); // blur зменшено до 4px
+    }
+
+
+
+    &__nav {
+      display: none;
+    }
+
+    &__mobile-menu {
+      display: block !important;
+      margin-left: auto;
+    }
+
+    &__hamburger {
+      width: 22px;
+      height: 13px;
+    }
+
+
+    &__checkbox {
+      width: 40px;
+      height: 40px;
+      top: -14px;
+      right: -14px;
+    }
+  }
+
+}

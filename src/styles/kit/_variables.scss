@@ -1,0 +1,69 @@
+// ===================================
+// VARIABLES
+// ===================================
+
+// Colors
+$color-primary: #771533;
+$color-primary-dark: #5a1028;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray-light: #f8f8f8;
+$color-gray-dark: #4e494a;
+$color-gray-medium: #40403f;
+$color-text-dark: #171111;
+$color-text-darker: #17120f;
+$color-white-transparent: rgba(255, 255, 255, 0.7);
+
+// Fonts
+$font-primary: 'Source Sans Pro', sans-serif;
+$font-display: 'Sail', serif;
+$font-headline: 'Notable', sans-serif;
+$font-subtitle: 'Poppins', sans-serif;
+$font-button: 'Oswald', sans-serif;
+
+// Font sizes
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 37px;
+$font-size-hero: 68px;
+$font-size-hero-mobile: 48px;
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 40px;
+$spacing-xxl: 60px;
+
+// Container and layout
+$container-width: 1200px;
+$hero-height: 802px;
+$hero-height-mobile: 100vh;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-xl: 18px;
+$border-radius-circle: 50%;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.4s ease;
+
+// Z-index
+$z-index-mobile-menu: 1000;
+$z-index-mobile-checkbox: 1100;
+$z-index-header: 10;
+
+// Breakpoints
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-max: 1199px;
+$breakpoint-desktop: 1200px;
+$breakpoint-small-mobile: 480px;

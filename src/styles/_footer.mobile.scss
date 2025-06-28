@@ -1,0 +1,81 @@
+// ===================================
+// FOOTER COMPONENT - MOBILE & TABLET
+// ===================================
+
+@use 'kit/variables' as *;
+@use 'kit/mixins' as *;
+
+.footer {
+  @include tablet {
+    padding: $spacing-lg $spacing-md;
+
+    &__content {
+      gap: $spacing-md;
+      max-width: none;
+    }
+
+
+
+    &__logo-image {
+      width: 80px;
+      height: 75px;
+      margin-bottom: 8px;
+    }
+
+    &__logo-text {
+      font-size: 20px;
+      letter-spacing: 20%;
+    }
+
+  }
+
+  @include mobile {
+    padding: $spacing-xl $spacing-sm;
+    min-width: 282px;
+
+    &__content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: $spacing-md;
+      max-width: none;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    &__contact {
+      order: 2;
+    }
+
+    &__logo {
+      &-image {
+        width: 68px;
+        height: 70px;
+        margin-bottom: 8px;
+      }
+
+      &-text {
+        font-size: 18px;
+        letter-spacing: 20%;
+      }
+    }
+
+    &__adress {
+      order: 1;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 8px;
+      max-width: 200px;
+      color: rgb(255 255 255 / 70%)
+    }
+
+    &__copyright {
+      order: 3;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    &__email {
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+// ===================================
+// VIDEO SECTION - DESKTOP
+// ===================================
+
+@use 'kit/variables' as *;
+@use 'kit/mixins' as *;
+
+.learn-more {
+  min-height: 637px;
+
+  @include background-image('https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-photo-2339181-1.png');
+  @include flex-center;
+
+  color: $color-white;
+  text-align: center;
+  position: relative;
+  background-color: rgb(170 13 13 / 20%);
+  background-blend-mode: multiply;
+
+  @include background-overlay (0.2);
+
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 799px;
+    padding: $spacing-xxl $spacing-sm;
+
+    @include flex-column;
+
+    align-items: center;
+  }
+
+  &__title {
+    @include font-headline(50px);
+
+    color: $color-white;
+    line-height: 50px;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__play-button {
+    @include button-play;
+
+    width: 163px;
+    height: 163px;
+    margin: $spacing-xl 0;
+
+    &::before {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 32px solid $color-primary;
+      margin-left: 8px;
+    }
+  }
+
+  &__description {
+    @include font-primary($font-size-xl, 400);
+
+    color: $color-white;
+    line-height: 32px;
+    max-width: 524px;
+  }
+}

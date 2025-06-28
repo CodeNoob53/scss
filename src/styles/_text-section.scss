@@ -1,0 +1,144 @@
+// ===================================
+// TEXT SECTIONS - DESKTOP
+// ===================================
+
+@use 'kit/variables' as *;
+@use 'kit/mixins' as *;
+
+// Hero Section
+.hero {
+  display: grid;
+  grid-template-columns: 677fr 523fr;
+  height: $hero-height;
+  background: $color-black;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    @include background-image('https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-bernyce-hollingworth-2702805-1.png');
+
+    background-image: url("https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-bernyce-hollingworth-2702805-1.png"), 
+                      linear-gradient(90deg, rgb(0 0 0 / 0%) 86%, rgb(0 0 0 / 100%) 100%);
+    background-blend-mode: multiply;
+  }
+
+  &__content {
+    @include flex-column-center;
+
+    text-align: center;
+    color: $color-white;
+    padding: $spacing-xxl $spacing-xl;
+  }
+
+  &__logo {
+    width: 133px;
+    height: 129px;
+    margin-bottom: $spacing-xl;
+    object-fit: cover;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    will-change: transform;
+    animation: logoFlip 4s ease-in-out infinite;
+  }
+
+  &__title {
+    @include font-display($font-size-hero);
+
+    color: $color-white;
+    line-height: 72px;
+
+    @include text-shadow;
+
+    margin-bottom: $spacing-xl;
+    max-width: 388px;
+
+    @include animation-fade-in-up(0.5s);
+  }
+
+  &__description {
+    @include font-primary($font-size-xl, 400);
+
+    color: $color-white;
+    line-height: 32px;
+    max-width: 439px;
+
+    @include animation-fade-in-up(0.8s);
+  }
+}
+
+// Content Section
+.content {
+  padding: 68px 20px;
+  background-color: $color-gray-light;
+
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include flex-column;
+
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-headline($font-size-xxl);
+
+    color: $color-gray-dark;
+    line-height: 50px;
+    margin-bottom: $spacing-xl;
+    max-width: 772px;
+  }
+
+  color: rgb(78 73 74);
+font-family: Notable;
+font-size: 36px;
+font-weight: 400;
+line-height: 50px;
+letter-spacing: 0%;
+text-align: center;
+
+  &__subtitle {
+    @include font-subtitle($font-size-xl);
+
+    color: $color-gray-medium;
+    line-height: 32px;
+    margin-bottom: $spacing-xxl;
+    max-width: 506px;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    width: 100%;
+    margin-bottom: $spacing-xxl;
+    text-align: left;
+  }
+
+  &__column {
+    @include font-primary($font-size-base, 400);
+
+    line-height: 22px;
+
+    &--left {
+      color: $color-text-dark;
+    }
+
+    &--right {
+      color: $color-text-darker;
+    }
+  }
+
+  &__button {
+    @include button-primary;
+
+    width: 115px;
+    height: 36px;
+    line-height: 26px;
+    transform-origin: center left;
+  }
+}

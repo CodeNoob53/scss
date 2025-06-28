@@ -1,0 +1,74 @@
+// ===================================
+// FOOTER COMPONENT - DESKTOP
+// ===================================
+
+@use 'kit/variables' as *;
+@use 'kit/mixins' as *;
+
+.footer {
+  background-color: $color-black;
+  padding: 33px $spacing-sm;
+  color: $color-white;
+
+  &__content {
+    font-family: "Source Sans Pro";
+    max-width: 905px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: $spacing-xl;
+  }
+
+  &__contact {
+    color: $color-white-transparent;
+    line-height: 19px;
+  }
+
+  &__email {
+    color: $color-white-transparent;
+
+    @include font-primary($font-size-base, 400);
+
+    line-height: 19px;
+    margin-top: 10px;
+    display: block;
+    transition: color $transition-normal;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__logo {
+    @include flex-column;
+
+    align-items: center;
+    text-align: center;
+  }
+
+  &__logo-image {
+    width: 99px;
+    height: 99px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  &__logo-text {
+    @include font-primary($font-size-medium, 400);
+
+    color: $color-white;
+    letter-spacing: 3.6px;
+    line-height: 16px;
+  }
+
+  &__copyright {
+    text-align: right;
+
+    @include font-primary($font-size-base, 400);
+
+    color: $color-white-transparent;
+    line-height: 19px;
+  }
+}

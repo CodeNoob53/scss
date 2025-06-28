@@ -1,0 +1,136 @@
+// ===================================
+// TEXT SECTIONS - MOBILE & TABLET
+// ===================================
+
+@use 'kit/variables' as *;
+@use 'kit/mixins' as *;
+
+// Hero Section - Tablet
+.hero {
+  @include tablet {
+    grid-template-columns: 1fr;
+    min-height: 802px;
+
+    &__image {
+      grid-column: 1;
+      grid-row: 1;
+      background-position-x: -100px;
+      background-image: url("https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-bernyce-hollingworth-2702805-1.png");
+      background-color: rgb(0 0 0 / 60%);
+    }
+
+    &__content {
+      grid-column: 1;
+      grid-row: 1;
+      z-index: 2;
+    }
+  }
+
+  // Hero Section - Mobile
+  @include mobile {
+    grid-template-columns: 1fr;
+    min-height: 802px;
+
+    &__image {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100%;
+      height: 100%;
+      background-position-x: -100px;
+      background-color: rgb(0 0 0 / 60%);
+      background-image: url("https://c.animaapp.com/mcbtnowr22sDoO/img/pexels-bernyce-hollingworth-2702805-1.png");
+    }
+
+    &__content {
+      grid-column: 1;
+      grid-row: 1;
+      z-index: 2;
+      gap: $spacing-md;
+      place-self: сenter center;
+    }
+  }
+
+  @include small-mobile {
+    min-height: 500px;
+
+    &__description {
+      max-width: 330px;
+      color: rgb(255 255 255 / 70%);
+    }
+  }
+}
+
+// Content Section - Tablet
+.content {
+  @include tablet {
+    padding: $spacing-xxl $spacing-md;
+
+    &__title {
+      @include clamp-text(30px, 5vw, 36px);
+
+      line-height: 1.2;
+      margin-bottom: $spacing-md;
+    }
+
+    &__columns {
+      gap: $spacing-xl;
+      margin-bottom: $spacing-xl;
+    }
+
+    &__column {
+      line-height: 1.5;
+    }
+  }
+
+  // Content Section - Mobile
+  @include mobile {
+    padding: $spacing-xxl $spacing-sm;
+
+    &__inner {
+      max-width: none;
+    }
+
+    &__columns {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+      margin-bottom: $spacing-xl;
+    }
+
+    &__title {
+      @include clamp-text(28px, 6vw, 36px);
+
+      line-height: 1.2;
+      margin-top: 78px; // відступ для заголовка
+    }
+
+    &__subtitle {
+      @include clamp-text($font-size-medium, 4vw, 24px);
+
+      padding: $spacing-xs 0;
+      line-height: 1.4;
+      margin-top: 68px; // відступ для заголовка
+    }
+
+    &__column {
+      font-size: $font-size-base;
+      line-height: 1.5;
+
+      &--right {
+        margin-top: 24px;
+      }
+    }
+
+    &__button {
+      margin-top: 54px;
+      margin-bottom: 72px;
+    }
+  }
+
+  @include small-mobile {
+    padding: $spacing-md 15px;
+
+    &__columns {
+      gap: $spacing-sm;
+    }
+  }
+}

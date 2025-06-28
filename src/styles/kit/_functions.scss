@@ -1,0 +1,51 @@
+// ===================================
+// FUNCTIONS
+// ===================================
+
+@use 'sass:math';
+
+// Convert px to rem
+@function rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Convert px to em
+@function em($px, $base: 16px) {
+  @return math.div($px, $base) * 1em;
+}
+
+// Calculate percentage
+@function percentage-width($target, $container) {
+  @return math.percentage(math.div($target, $container));
+}
+
+// Lighten color
+@function lighten-color($color, $amount: 10%) {
+  @return mix(white, $color, $amount);
+}
+
+// Darken color
+@function darken-color($color, $amount: 10%) {
+  @return mix(black, $color, $amount);
+}
+
+// Z-index function for managing layers
+$z-indexes: (
+  'modal': 1000,
+  'dropdown': 900,
+  'header': 800,
+  'overlay': 700,
+  'default': 1
+);
+
+@function z-index($key) {
+  @return map-get($z-indexes, $key);
+}
+
+// Responsive font size calculation
+@function responsive-font-size($min-size, $max-size, $min-vw: 320px, $max-vw: 1200px) {
+  $vw-difference: ($max-vw - $min-vw) / 100vw;
+  $size-difference: $max-size - $min-size;
+  
+  @return calc(#{$min-size} + #{$size-difference} * #{$vw-difference});
+}

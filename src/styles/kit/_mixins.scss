@@ -1,0 +1,228 @@
+// ===================================
+// MIXINS
+// ===================================
+
+@use 'variables' as *;
+
+// Breakpoints mixins
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-tablet-max) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media (max-width: $breakpoint-small-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Font mixins
+@mixin font-primary($size: $font-size-base, $weight: 400) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin font-display($size: $font-size-hero) {
+  font-family: $font-display;
+  font-size: $size;
+  font-weight: 400;
+}
+
+@mixin font-headline($size: $font-size-xxl) {
+  font-family: $font-headline;
+  font-size: $size;
+  font-weight: 400;
+}
+
+@mixin font-subtitle($size: $font-size-xl) {
+  font-family: $font-subtitle;
+  font-size: $size;
+  font-weight: 400;
+}
+
+@mixin font-button($size: $font-size-small) {
+  font-family: $font-button;
+  font-size: $size;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}
+
+// Button mixins
+@mixin button-base {
+  border: none;
+  cursor: pointer;
+  transition: all $transition-normal;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-primary {
+  @include button-base;
+  @include font-button;
+
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: $border-radius-xl;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+
+  &:hover {
+    background-color: $color-primary-dark;
+    transform: rotate(8deg);
+  }
+}
+
+@mixin button-play {
+  @include button-base;
+
+  border-radius: $border-radius-circle;
+  background: $color-white;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 32px solid $color-primary;
+    transition: border-left-color $transition-normal;
+    margin-left: 8px;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgb(0 0 0 / 30%);
+
+    &::before {
+      border-left-color: $color-white;
+    }
+  }
+}
+
+// Layout mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0;
+}
+
+// Animation mixins
+@mixin animation-fade-in-up($delay: 0s) {
+  animation: fadeInUp 1s ease-out $delay both;
+}
+
+@mixin animation-slide-in-left($delay: 0s) {
+  animation: slideInLeft 1s ease-out $delay both;
+}
+
+@mixin animation-slide-in-right($delay: 0s) {
+  animation: slideInRight 1s ease-out $delay both;
+}
+
+// Text mixins
+@mixin text-shadow {
+  text-shadow: 0 4px 12px rgb(0 0 0 / 44%);
+}
+
+@mixin clamp-text($min, $preferred, $max) {
+  font-size: clamp($min, $preferred, $max);
+}
+
+// Background mixins
+@mixin background-overlay($opacity: 0.4) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, $opacity);
+  }
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+}
+
+// Responsive spacing
+@mixin responsive-padding($desktop, $tablet: null, $mobile: null) {
+  padding: $desktop;
+
+  @if $tablet {
+    @include tablet {
+      padding: $tablet;
+    }
+  }
+
+  @if $mobile {
+    @include mobile {
+      padding: $mobile;
+    }
+  }
+}
+
+@mixin responsive-margin($desktop, $tablet: null, $mobile: null) {
+  margin: $desktop;
+
+  @if $tablet {
+    @include tablet {
+      margin: $tablet;
+    }
+  }
+
+  @if $mobile {
+    @include mobile {
+      margin: $mobile;
+    }
+  }
+}
